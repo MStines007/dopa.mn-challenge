@@ -1,0 +1,59 @@
+//
+// Write a mixin for border radius which takes a pixel parameter that includes vendor prefixes
+//
+//
+
+@mixin box-shadow($vars) {
+  -moz-box-shadow: $vars;
+  -webkit-box-shadow: $vars;
+  box-shadow: $vars;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  background: #333;
+  text-align: center;
+  color: #dedede;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+input {
+  border: none;
+  font-size: 1.4em;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  padding: 4px;
+  outline: none;
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+  @include border-radius(4px);
+  @include box-shadow(3px 3px 3px #AAA inset);
+}
+button {
+  display: block;
+  width: 150px;
+  margin: 10px auto;
+  font-size: 1.4em;
+  font-family: Verdana, sans-serif;
+  background: #BBB;
+  outline: none;
+  @include box-shadow(2px 2px 0px #777);
+  @include border-radius(4px);
+}
+
+#results {
+  width: 80%;
+  margin: 40px auto 0;
+  th {
+    font-size: 1.4em;
+    text-align: left;
+  }
+  td {
+    text-align: left;
+  }
+}
