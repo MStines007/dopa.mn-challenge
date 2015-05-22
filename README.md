@@ -27,7 +27,9 @@ You should use this to your advantage as a way to differentiate yourself from th
 Ask questions, tell us what you're thinking, and show us why you would be someone good to work with.
 However, do not expect us to walk you through the the entire assignment.  
 
-One caveat of this channel is that we will be working during the times in which you may have a question. We may or may not be able to answer at any given moment so please be patient.
+One caveat of this channel is that we will be working during the times in which you may have a question. We may or may not be able to answer at any given moment so please be patient.  
+
+You will receive an email invitation that will link you to your specific slack channel
 
 ### Starting product
 
@@ -35,7 +37,7 @@ Various parts of this application are broken and we need you to get it working. 
 
 ### Finished Product
 
-![alt text](https://raw.githubusercontent.com/dopa/dopa-applicant/feature/places/app/assets/images/working-product.jpg "Working Product")
+![alt text](https://raw.githubusercontent.com/dopa/dopamine-applicant/master/app/assets/images/working-product.jpg "Working Product")
 
 ## Additional features
 
