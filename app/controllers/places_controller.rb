@@ -7,7 +7,7 @@ class PlacesController < ApplicationController
     @places = Place.get_venue_objects_collection_at_location(postal_code, limit)
 
     respond_to do |format|
-      format.json { render :index, status: ok }
+      format.json { render :index, status: :ok }
       format.html { render :index }
     end
   end
@@ -17,7 +17,7 @@ class PlacesController < ApplicationController
 
   private
 
-  def places_params
+  def place_params
     params.permit(:postal_code, :limit)
   end
 
