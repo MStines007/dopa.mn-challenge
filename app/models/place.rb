@@ -12,10 +12,11 @@ class Place
     @cross_streets = cross_streets
     @url = url
     @foursquare_id = foursquare_id
+    @category = category
   end
 
   def self.url_for_places_near(postal_code = 10003)
-    postal_code = 10003 if postal_code.nil
+    postal_code = 10003 if postal_code.nil?
 
     near_query = "near=#{ postal_code }"
     category_query = "categoryId=4d4b7105d754a06374d81259"
@@ -72,7 +73,7 @@ class Place
 
     {
       name: place_from_api["name"],
-      cross_streets: place_from_api["crossStreet"],
+      cross_streets: place_from_api["location"]["crossStreet"],
       url: place_from_api["url"],
       category: place_from_api["categories"].first["name"],
       foursquare_id: place_from_api["id"]
