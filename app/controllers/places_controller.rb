@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
     postal_code = Place.postal_code_default(place_params[:postal_code])
     limit = Place.limit_default(place_params[:limit])
 
-    @places = Place.get_venue_objects_collection_at_location(postal_code, limit)
+    @places = Place.get_venue_objects_collection_at_location(postal_code, limit).shuffle
 
     respond_to do |format|
       format.json { render :index, status: :ok }
