@@ -20,7 +20,7 @@
 
     var $btn = $(this),
         location = $('#location').val(),
-        limit = "8";
+        limit = "25";
 
     location = location.replace(" ","");
 
