@@ -33,11 +33,12 @@
     $.get(url, function(result){
 
       $("#results").empty();
-      $("#results").append("<tr><th>Name</th><th>Category</th><th>Cross Streets</th><th>Url</th></tr>");
-      for (var i = 0; i < result.length; i+=1){
-        $("#results").append("<tr><th>" + result[i].name + "</th>" + "<th>" + result[i].category + "</th>" + "<th>" + result[i].cross_streets + "</th>" + "<th>" + result[i].url + "</th></tr>" );
+      $("#x-btn-submit").html("Roll Again!");
+      $("#results").append("<tr><th>Name</th><th>Category</th><th>Cross Streets</th><th>Url</th><th>Phone #</th></tr>");
+      for (var num = 0; num < result.length; num+=1){
+        $("#results").append("<tr><th>"+result[num].name+"</th>"+"<th>"+result[num].category+"</th>"+"<th>"+result[num].cross_streets+"</th>"+"<th>"+result[num].url+"</th>"+"<th>"+result[num].phone_num+"</th></tr>");
       }
-      
+
       //empty the #results table
       //append the headers Name, Category, Cross Streets and Url
       //loop through the results and output them in the table
