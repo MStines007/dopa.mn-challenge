@@ -5,4 +5,5 @@ json.array!(@places) do |place|
   json.category place.category
   json.foursquare_id place.foursquare_id
   json.phone_num place.phone_num
+  json.twitter place.twitter
 end

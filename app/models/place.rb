@@ -5,15 +5,16 @@ class Place
   DEFAULT_LIMIT = 25
   DEFAULT_POSTAL_CODE = "10003"
 
-  attr_accessor :name, :cross_streets, :url, :category, :foursquare_id, :phone_num
+  attr_accessor :name, :cross_streets, :url, :category, :foursquare_id, :phone_num, :twitter
 
-  def initialize(name, cross_streets, url, category, foursquare_id, phone_num)
+  def initialize(name, cross_streets, url, category, foursquare_id, phone_num, twitter)
     @name = name
     @cross_streets = cross_streets
     @url = url
     @foursquare_id = foursquare_id
     @category = category
     @phone_num = phone_num
+    @twitter = twitter
   end
 
   def self.url_for_places_near(postal_code = 10003)
@@ -64,7 +65,8 @@ class Place
         parsed[:url],
         parsed[:category],
         parsed[:foursquare_id],
-        parsed[:phone_num]
+        parsed[:phone_num],
+        parsed[:twitter]
       )
     end
   end
@@ -79,7 +81,8 @@ class Place
       url: place_from_api["url"],
       category: place_from_api["categories"].first["name"],
       foursquare_id: place_from_api["id"],
-      phone_num: place_from_api["contact"]["formattedPhone"]
+      phone_num: place_from_api["contact"]["formattedPhone"],
+      twitter: place_from_api["contact"]["twitter"]
     }
   end
 
