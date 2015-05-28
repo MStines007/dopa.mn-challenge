@@ -34,11 +34,16 @@
 
       $("#results").empty();
       $("#x-btn-submit").html("Roll Again!");
-      $("#results").append("<tr><th>Name</th><th>Category</th><th>Cross Streets</th><th>Url</th><th>Phone #</th><th>Twitter</th></tr>");
-      for (var num = 0; num < result.length; num+=1){
-        $("#results").append("<tr><th>"+result[num].name+"</th>"+"<th>"+result[num].category+"</th>"+"<th>"+result[num].cross_streets+"</th>"+"<th>"+result[num].url+"</th>"+"<th>"+result[num].phone_num+"</th>"+"<th>@"+result[num].twitter+"</th></tr>");
-      }
 
+      var randomNum = Math.floor(Math.random() * result.length);
+
+      $("#results").append("<tr><th>Name</th><th>Category</th><th>Cross Streets</th><th>Url</th><th>Phone #</th><th>Twitter</th></tr>");
+
+      $("#results").append("<tr><th>"+result[randomNum].name+"</th>"+"<th>"+result[randomNum].category+"</th>"+"<th>"+result[randomNum].cross_streets+"</th>"+"<th>"+result[randomNum].url+"</th>"+"<th>"+result[randomNum].phone_num+"</th>"+"<th>@"+result[randomNum].twitter+"</th></tr>");
+      
+      // for (var num = 0; num < result.length; num+=1){
+      //   $("#results").append("<tr><th>"+result[num].name+"</th>"+"<th>"+result[num].category+"</th>"+"<th>"+result[num].cross_streets+"</th>"+"<th>"+result[num].url+"</th>"+"<th>"+result[num].phone_num+"</th>"+"<th>@"+result[num].twitter+"</th></tr>");
+      
       //empty the #results table
       //append the headers Name, Category, Cross Streets and Url
       //loop through the results and output them in the table
