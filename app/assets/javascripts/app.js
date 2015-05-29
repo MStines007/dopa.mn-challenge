@@ -39,8 +39,8 @@
 
       $("#results").append("<tr><th>Name</th><th>Category</th><th>Cross Streets</th><th>Url</th><th>Phone #</th><th>Twitter</th></tr>");
 
-      $("#results").append("<tr><th>"+result[randomNum].name+"</th>"+"<th>"+result[randomNum].category+"</th>"+"<th>"+result[randomNum].cross_streets+"</th>"+"<th>"+result[randomNum].url+"</th>"+"<th>"+result[randomNum].phone_num+"</th>"+"<th>@"+result[randomNum].twitter+"</th></tr>");
-      
+      $("#results").append("<tr><td>"+result[randomNum].name+"</td>"+"<td>"+result[randomNum].category+"</td>"+"<td>"+result[randomNum].cross_streets+"</td>"+"<td>"+result[randomNum].url+"</td>"+"<td>"+result[randomNum].phone_num+"</td>"+"<td>@"+result[randomNum].twitter+"</td></tr>");
+
       // for (var num = 0; num < result.length; num+=1){
       //   $("#results").append("<tr><th>"+result[num].name+"</th>"+"<th>"+result[num].category+"</th>"+"<th>"+result[num].cross_streets+"</th>"+"<th>"+result[num].url+"</th>"+"<th>"+result[num].phone_num+"</th>"+"<th>@"+result[num].twitter+"</th></tr>");
       

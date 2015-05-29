@@ -1,7 +1,15 @@
-//
+/*//
 // Write a mixin for border radius which takes a pixel parameter that includes vendor prefixes
 //
-//
+//*/
+
+@mixin border-radius($pixels) {
+  border-radius: $pixels;
+  -webkit-border-radius: $pixels; 
+  -moz-border-radius: $pixels; 
+  -ms-border-radius: $pixels;
+}
+
 
 @mixin box-shadow($vars) {
   -moz-box-shadow: $vars;
