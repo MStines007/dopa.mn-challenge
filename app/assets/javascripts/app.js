@@ -38,20 +38,41 @@
 
       var randomNum = Math.floor(Math.random() * result.length);
 
-      $("#results").append("<tr><th>Name</th><th>Category</th><th>Cross Streets</th><th>Url</th><th>Phone #</th><th>Twitter</th></tr>");
-      $("#results").append("<tr><td>"+result[randomNum].name+"</td>"+"<td>"+result[randomNum].category+"</td>"+"<td>"+result[randomNum].cross_streets+"</td>"+"<td>"+result[randomNum].url+"</td>"+"<td>"+result[randomNum].phone_num+"</td>"+"<td>@"+result[randomNum].twitter+"</td></tr>");
+      $("#results").append("<tr>\
+                              <th>Name</th>\
+                              <th>Category</th>\
+                              <th>Cross Streets</th>\
+                              <th>Url</th>\
+                              <th>Phone #</th>\
+                              <th>Twitter</th>\
+                            </tr>");
+
+      $("#results").append("<tr>\
+                              <td>"+result[randomNum].name+"</td>"+"\
+                              <td>"+result[randomNum].category+"</td>"+"\
+                              <td>"+result[randomNum].cross_streets+"</td>"+"\
+                              <td>"+result[randomNum].url+"</td>"+"\
+                              <td>"+result[randomNum].phone_num+"</td>"+"\
+                              <td>@"+result[randomNum].twitter+"</td>\
+                            </tr>");
 
       // for (var num = 0; num < result.length; num+=1){
-      //   $("#results").append("<tr><td>"+result[num].name+"</td>"+"<td>"+result[num].category+"</td>"+"<td>"+result[num].cross_streets+"</td>"+"<td>"+result[num].url+"</td>"+"<td>"+result[num].phone_num+"</td>"+"<td>@"+result[num].twitter+"</td></tr>");
+      // $("#results").append("<tr>\
+      //                         <td>"+result[num].name+"</td>"+"\
+      //                         <td>"+result[num].category+"</td>"+"\
+      //                         <td>"+result[num].cross_streets+"</td>"+"\
+      //                         <td>"+result[num].url+"</td>"+"\
+      //                         <td>"+result[num].phone_num+"</td>"+"\
+      //                         <td>@"+result[num].twitter+"</td>\
+      //                       </tr>");
+      // }
       
       //empty the #results table
       //append the headers Name, Category, Cross Streets and Url
       //loop through the results and output them in the table
       //use jQuery or vanilla JS
     });
-
   }
-
 
   $(function(){
     init();
